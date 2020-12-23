@@ -3,12 +3,12 @@ import App from "../App";
 
 test("renders google link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/exit to google/i);
+  const linkElement = screen.getByText(/exit to google . com/i);
   expect(linkElement).toBeInTheDocument();
 });
 
-describe("My Test Suite", () => {
-  it("My Test Case", () => {
+describe("My Test true", () => {
+  it("My Test truthful", () => {
     expect(true).toEqual(true);
   });
 });

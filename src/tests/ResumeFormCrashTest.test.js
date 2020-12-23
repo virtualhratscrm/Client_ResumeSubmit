@@ -1,10 +1,9 @@
 import React from "react";
-import ResumeSubmitForm from "../src/components/form/ResumeSubmitForm";
+import ResumeSubmitForm from "../components/form/ResumeSubmitForm";
 import ReactDom from "react-dom";
 import { cleanup } from "@testing-library/react";
-import { shallow, configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-configure({ adapter: new Adapter() });
+
+
 
 // this here is gold
 afterEach(cleanup);
@@ -12,7 +11,7 @@ afterEach(cleanup);
 
 // basic crash test
 
-describe("This component test should render 2nd blue top bar without crashing", () => {
+describe("This component test should render the resume submit form component without crashing", () => {
   it("Should render as expected!", () => {
     const div = document.createElement("div");
     ReactDom.render(<ResumeSubmitForm />, div);

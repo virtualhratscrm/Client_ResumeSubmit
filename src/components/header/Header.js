@@ -17,7 +17,7 @@ export default class Header extends Component {
             {" "}
             <a href="https://www.google.com" target="_blank" rel="noreferrer">
               {" "}
-              exit to google{" "}
+              exit to google . com {" "}
             </a>{" "}
           </li>
         </ul>

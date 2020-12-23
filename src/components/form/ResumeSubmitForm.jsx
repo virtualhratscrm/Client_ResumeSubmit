@@ -9,7 +9,7 @@ export default class ResumeSubmitForm extends Component {
           <img
             className="topLogo"
             src="img/horizontal_on_white.jpeg"
-            alt="virtual HR Co LOGO"
+            alt="Virtual HR Co LOGO"
           ></img>
         </div>
         <div className="forminfobox">
@@ -30,9 +30,10 @@ export default class ResumeSubmitForm extends Component {
         </div>
         <form>
           <div className="forminfobox">
-            <label>Email address * </label>
+            <label htmlFor="email">Email address * </label>
             <div></div>
             <input
+              aria-required="true"
               type="email"
               id="email"
               name="email"
@@ -41,9 +42,10 @@ export default class ResumeSubmitForm extends Component {
             />
           </div>
           <div className="forminfobox">
-            <label>First name: *</label>
+            <label htmlFor="fname">First name: *</label>
             <div></div>
             <input
+              aria-required="true"
               type="text"
               id="fname"
               name="fname"
@@ -52,9 +54,10 @@ export default class ResumeSubmitForm extends Component {
             />
           </div>
           <div className="forminfobox">
-            <label>Last name: *</label>
+            <label htmlFor="lname">Last name: *</label>
             <div></div>
             <input
+              aria-required="true"
               type="text"
               id="lname"
               name="lname"
@@ -63,9 +66,10 @@ export default class ResumeSubmitForm extends Component {
             />
           </div>
           <div className="forminfobox">
-            <label>Phone number *:</label>
+            <label htmlFor="phone">Phone number *:</label>
             <div></div>
             <input
+              aria-required="true"
               type="text"
               id="phone"
               name="phone"
@@ -76,9 +80,10 @@ export default class ResumeSubmitForm extends Component {
           <div className="forminfobox">
             <h3>Address *</h3>
             <div></div>
-            <label>Address Line 1 *:</label>
+            <label htmlFor="addressLine1">Address Line 1 *:</label>
             <div></div>
             <input
+              aria-required="true"
               type="text"
               id="addressLine1"
               name="addressLine1"
@@ -86,18 +91,20 @@ export default class ResumeSubmitForm extends Component {
               placeholder=" Number Street Name"
             />
             <div></div>
-            <label>Address Line 2 :</label>
+            <label htmlFor="addressLine2">Address Line 2 :</label>
             <div></div>
             <input
+              aria-required="false"
               type="text"
               id="addressLine2"
               name="addressLine2"
               placeholder="Apt or Suite Number "
             />
             <div></div>
-            <label>City *:</label>
+            <label htmlFor="city">City *:</label>
             <div></div>
             <input
+              aria-required="true"
               type="text"
               id="city"
               name="city"
@@ -105,19 +112,21 @@ export default class ResumeSubmitForm extends Component {
               placeholder=" city"
             />
             <div></div>
-            <label>State *:</label>
+            <label htmlFor="state">State *:</label>
             <div></div>
             <input
+              aria-required="true"
               type="text"
               id="state"
               name="state"
               required={true}
-              placeholder=" state"
+              placeholder=" full state name"
             />
             <div></div>
-            <label> Zip Code *:</label>
+            <label htmlFor="zipcode"> Zip Code *:</label>
             <div></div>
             <input
+              aria-required="true"
               type="text"
               id="zipcode"
               name="zipcode"
@@ -134,7 +143,7 @@ export default class ResumeSubmitForm extends Component {
                 name="position1"
                 value="Line Cook"
               />
-              <label> Line Cook</label>
+              <label htmlFor="position1"> Line Cook</label>
               <div></div>
               <input
                 className="check"
@@ -142,7 +151,7 @@ export default class ResumeSubmitForm extends Component {
                 name="position2"
                 value="Server"
               />
-              <label> Server</label>
+              <label htmlFor="position2"> Server</label>
               <div></div>
               <input
                 type="checkbox"
@@ -150,7 +159,7 @@ export default class ResumeSubmitForm extends Component {
                 name="position3"
                 value="Server Assistant"
               />
-              <label> Server Assistant</label>
+              <label htmlFor="position3"> Server Assistant</label>
               <div></div>
               <input
                 type="checkbox"
@@ -158,7 +167,7 @@ export default class ResumeSubmitForm extends Component {
                 name="position4"
                 value="Food Runner"
               />
-              <label> Food Runner</label>
+              <label htmlFor="position4"> Food Runner</label>
               <div></div>
               <input
                 type="checkbox"
@@ -166,7 +175,7 @@ export default class ResumeSubmitForm extends Component {
                 name="position5"
                 value="Take Out Attendant"
               />
-              <label> Take Out Attendant</label>
+              <label htmlFor="position5"> Take Out Attendant</label>
               <div></div>
               <input
                 type="checkbox"
@@ -174,7 +183,7 @@ export default class ResumeSubmitForm extends Component {
                 name="position6"
                 value="Don't see what you need? Submit your resume anyways for future opportunities"
               />
-              <label>
+              <label htmlFor="position6">
                 {" "}
                 Don't see what you need? Submit your resume anyways for future
                 opportunities
@@ -186,6 +195,7 @@ export default class ResumeSubmitForm extends Component {
               Copy and paste your resume for consideration (please format it). *
             </h3>
             <textarea
+              aria-required="true"
               id="resume"
               name="resume"
               required={true}
@@ -201,7 +211,7 @@ export default class ResumeSubmitForm extends Component {
                 name="authorizedTrue"
                 value="authorizedTrue"
               />
-              <label> Yes </label>
+              <label htmlFor="authorizedTrue"> Yes </label>
               <div></div>
               <input
                 className="check"
@@ -209,13 +219,18 @@ export default class ResumeSubmitForm extends Component {
                 name="authorizedFalse"
                 value="authorizedFalse"
               />
-              <label> No </label>
+              <label htmlFor="authorizedFalse"> No </label>
             </div>
           </div>
           <div className="forminfobox">
             <h3>*</h3>
             <p>Date</p>
-            <input type="date" required={true} />
+            <input
+              aria-label="today's date"
+              aria-required="true"
+              type="date"
+              required={true}
+            />
           </div>
           <input
             type="submit"
@@ -229,9 +244,10 @@ export default class ResumeSubmitForm extends Component {
   }
 }
 
+// hold for now
+
 // visa sponsorship question ?
 
-// hold for now
 // prior conviction clause
 // check box yes / no
 // explain field
