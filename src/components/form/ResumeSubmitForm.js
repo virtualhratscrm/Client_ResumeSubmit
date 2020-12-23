@@ -7,7 +7,7 @@ export default class ResumeSubmitForm extends Component {
       <div>
         <div class="topTitle">
           {/* // get logo file here */}
-         <img src='../' alt="virtual HR Co LOGO"></img>
+         <img class="topLogo" src='img/horizontal_on_white.jpeg' alt="virtual HR Co LOGO"></img>
         </div>
         <div class="forminfobox">
           <h2>Job Interest Form </h2>
