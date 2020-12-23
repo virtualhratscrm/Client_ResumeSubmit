@@ -5,11 +5,14 @@ export default class ResumeSubmitForm extends Component {
   render() {
     return (
       <div>
-        <div class="topTitle">
-          {/* // get logo file here */}
-         <img class="topLogo" src='img/horizontal_on_white.jpeg' alt="virtual HR Co LOGO"></img>
+        <div className="topTitle">
+          <img
+            className="topLogo"
+            src="img/horizontal_on_white.jpeg"
+            alt="virtual HR Co LOGO"
+          ></img>
         </div>
-        <div class="forminfobox">
+        <div className="forminfobox">
           <h2>Job Interest Form </h2>
           <p>
             We know that finding a meaningful and rewarding job can be a long
@@ -26,64 +29,64 @@ export default class ResumeSubmitForm extends Component {
           <p>* Required</p>
         </div>
         <form>
-          <div class="forminfobox">
-            <label for="email">Email address * </label>
+          <div className="forminfobox">
+            <label>Email address * </label>
             <div></div>
             <input
               type="email"
               id="email"
               name="email"
-              required="true"
+              required={true}
               placeholder="email address"
             />
           </div>
-          <div class="forminfobox">
-            <label for="fname">First name: *</label>
+          <div className="forminfobox">
+            <label>First name: *</label>
             <div></div>
             <input
               type="text"
               id="fname"
               name="fname"
-              required="true"
+              required={true}
               placeholder="First Name"
             />
           </div>
-          <div class="forminfobox">
-            <label for="lname">Last name: *</label>
+          <div className="forminfobox">
+            <label>Last name: *</label>
             <div></div>
             <input
               type="text"
               id="lname"
               name="lname"
-              required="true"
+              required={true}
               placeholder="Last Name"
             />
           </div>
-          <div class="forminfobox">
-            <label for="phone">Phone number *:</label>
+          <div className="forminfobox">
+            <label>Phone number *:</label>
             <div></div>
             <input
               type="text"
               id="phone"
               name="phone"
-              required="true"
+              required={true}
               placeholder="Phone Number"
             />
           </div>
-          <div class="forminfobox">
+          <div className="forminfobox">
             <h3>Address *</h3>
             <div></div>
-            <label for="addressLine1">Address Line 1 *:</label>
+            <label>Address Line 1 *:</label>
             <div></div>
             <input
               type="text"
               id="addressLine1"
               name="addressLine1"
-              required="true"
+              required={true}
               placeholder=" Number Street Name"
             />
             <div></div>
-            <label for="addressLine2">Address Line 2 :</label>
+            <label>Address Line 2 :</label>
             <div></div>
             <input
               type="text"
@@ -92,127 +95,127 @@ export default class ResumeSubmitForm extends Component {
               placeholder="Apt or Suite Number "
             />
             <div></div>
-            <label for="city">City *:</label>
+            <label>City *:</label>
             <div></div>
             <input
               type="text"
               id="city"
               name="city"
-              required="true"
+              required={true}
               placeholder=" city"
             />
             <div></div>
-            <label for="state">State *:</label>
+            <label>State *:</label>
             <div></div>
             <input
               type="text"
               id="state"
               name="state"
-              required="true"
+              required={true}
               placeholder=" state"
             />
             <div></div>
-            <label for="zipcode"> Zip Code *:</label>
+            <label> Zip Code *:</label>
             <div></div>
             <input
               type="text"
               id="zipcode"
               name="zipcode"
-              required="true"
+              required={true}
               placeholder=" zip code"
             />
           </div>
-          <div class="forminfocheckbox">
+          <div className="forminfocheckbox">
             <h3>Which position(s) are you interested in? *</h3>
-            <div class="formArea">
+            <div className="formArea">
               <input
-                class="check"
+                className="check"
                 type="checkbox"
                 name="position1"
                 value="Line Cook"
               />
-              <label for="position1"> Line Cook</label>
+              <label> Line Cook</label>
               <div></div>
               <input
-                class="check"
+                className="check"
                 type="checkbox"
                 name="position2"
                 value="Server"
               />
-              <label for="position2"> Server</label>
+              <label> Server</label>
               <div></div>
               <input
                 type="checkbox"
-                class="check"
+                className="check"
                 name="position3"
                 value="Server Assistant"
               />
-              <label for="position3"> Server Assistant</label>
+              <label> Server Assistant</label>
               <div></div>
               <input
                 type="checkbox"
-                class="check"
+                className="check"
                 name="position4"
                 value="Food Runner"
               />
-              <label for="position4"> Food Runner</label>
+              <label> Food Runner</label>
               <div></div>
               <input
                 type="checkbox"
-                class="check"
+                className="check"
                 name="position5"
                 value="Take Out Attendant"
               />
-              <label for="position5"> Take Out Attendant</label>
+              <label> Take Out Attendant</label>
               <div></div>
               <input
                 type="checkbox"
-                class="check"
+                className="check"
                 name="position6"
                 value="Don't see what you need? Submit your resume anyways for future opportunities"
               />
-              <label for="position6">
+              <label>
                 {" "}
                 Don't see what you need? Submit your resume anyways for future
                 opportunities
               </label>
             </div>
           </div>
-          <div class="forminfobox">
+          <div className="forminfobox">
             <h3>
               Copy and paste your resume for consideration (please format it). *
             </h3>
             <textarea
               id="resume"
               name="resume"
-              required="true"
+              required={true}
               placeholder="Resume Here"
             />
           </div>{" "}
-          <div class="forminfobox">
+          <div className="forminfobox">
             <h3>Are you legally authorized to work in the United States? *</h3>
-            <div class="formArea">
+            <div className="formArea">
               <input
-                class="check"
+                className="check"
                 type="checkbox"
                 name="authorizedTrue"
                 value="authorizedTrue"
               />
-              <label for="authorizedTrue"> Yes </label>
+              <label> Yes </label>
               <div></div>
               <input
-                class="check"
+                className="check"
                 type="checkbox"
                 name="authorizedFalse"
                 value="authorizedFalse"
               />
-              <label for="authorizedFalse"> No </label>
+              <label> No </label>
             </div>
           </div>
-          <div class="forminfobox">
+          <div className="forminfobox">
             <h3>*</h3>
             <p>Date</p>
-            <input type="date" required="true" />
+            <input type="date" required={true} />
           </div>
           <input
             type="submit"
@@ -225,16 +228,6 @@ export default class ResumeSubmitForm extends Component {
     );
   }
 }
-
-// add address field
-// street
-// street2
-// city
-// state
-// zip
-
-// add
-// authorized to work in us? yes/no
 
 // visa sponsorship question ?
 
