@@ -1,0 +1,52 @@
+body {
+  background-color:#A73B00;
+}
+.check {
+  text-align: left;
+  margin: 0;
+  width: auto;
+}
+
+.topTitle {
+  color: red;
+  text-align: center;
+  width: 70%;
+  margin: 0 15%;
+}
+
+.forminfobox {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 3% 15%;
+  width: 70%;
+}
+.forminfocheckbox {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 3% 15%;
+  width: 70%;
+  text-align: left;
+}
+
+#resumeSubmitButton {
+  background-color: red;
+  color: white;
+  border-radius: 10%;
+  padding: 10px 20px;
+  margin: 3% 15%;
+  font-size: 15px;
+  width: 150px;
+}
+
+input {
+  width: 68%;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(220, 220, 243);
+}
+
+input:focus {
+  border-color: rgb(175, 13, 13);
+}
