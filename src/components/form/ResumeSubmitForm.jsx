@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import "./ResumeForm.css";
 
-var jobTypes = document.getElementsByClassName(".jobtype");
+var jobTypes = document.querySelectorAll(".jobtype");
 
 console.log("test");
 
 function validateJobTypeChecked() {
   var sucess = false;
-
+  console.log(jobTypes);
   for (let i = 0; i < jobTypes.length; i++) {
-    if (sucess) {
+    if (jobTypes[i].checked) {
+      sucess = true;
     }
   }
 }
+
+validateJobTypeChecked();
 
 export default class ResumeSubmitForm extends Component {
   render() {
@@ -43,7 +46,7 @@ export default class ResumeSubmitForm extends Component {
         </div>
         <form>
           <div className="forminfobox">
-            <label htmlFor="email">Email address * </label>
+            <label htmlFor="email">Email address : * </label>
             <div></div>
             <input
               aria-required="true"
@@ -55,7 +58,7 @@ export default class ResumeSubmitForm extends Component {
             />
           </div>
           <div className="forminfobox">
-            <label htmlFor="fname">First name: *</label>
+            <label htmlFor="fname">First name : *</label>
             <div></div>
             <input
               aria-required="true"
@@ -67,7 +70,7 @@ export default class ResumeSubmitForm extends Component {
             />
           </div>
           <div className="forminfobox">
-            <label htmlFor="lname">Last name: *</label>
+            <label htmlFor="lname">Last name : *</label>
             <div></div>
             <input
               aria-required="true"
@@ -79,7 +82,7 @@ export default class ResumeSubmitForm extends Component {
             />
           </div>
           <div className="forminfobox">
-            <label htmlFor="phone">Phone number *:</label>
+            <label htmlFor="phone">Phone number : *</label>
             <div></div>
             <input
               aria-required="true"
@@ -93,7 +96,7 @@ export default class ResumeSubmitForm extends Component {
           <div className="forminfobox">
             <h3>Address *</h3>
             <div></div>
-            <label htmlFor="addressLine1">Address Line 1 *:</label>
+            <label htmlFor="addressLine1">Address Line 1 : *</label>
             <div></div>
             <input
               aria-required="true"
@@ -114,7 +117,7 @@ export default class ResumeSubmitForm extends Component {
               placeholder="Apt or Suite Number "
             />
             <div></div>
-            <label htmlFor="city">City *:</label>
+            <label htmlFor="city">City : *</label>
             <div></div>
             <input
               aria-required="true"
@@ -125,7 +128,7 @@ export default class ResumeSubmitForm extends Component {
               placeholder=" city"
             />
             <div></div>
-            <label htmlFor="state">State *:</label>
+            <label htmlFor="state">State : *</label>
             <div></div>
             <select name="state" required={true}>
               <option value="AL">Alabama</option>
@@ -137,7 +140,9 @@ export default class ResumeSubmitForm extends Component {
               <option value="CT">Connecticut</option>
               <option value="DE">Delaware</option>
               <option value="DC">District of Columbia</option>
-              <option value="FL" selected>Florida</option>
+              <option value="FL" selected>
+                Florida
+              </option>
               <option value="GA">Georgia</option>
               <option value="HI">Hawaii</option>
               <option value="ID">Idaho</option>
@@ -189,7 +194,7 @@ export default class ResumeSubmitForm extends Component {
               placeholder=" full state name"
             /> */}
             <div></div>
-            <label htmlFor="zipcode"> Zip Code *:</label>
+            <label htmlFor="zipcode"> Zip Code : *</label>
             <div></div>
             <input
               aria-required="true"
@@ -290,8 +295,45 @@ export default class ResumeSubmitForm extends Component {
             </div>
           </div>
           <div className="forminfobox">
-            <h3>*</h3>
-            <p>Date</p>
+            <label htmlFor="highestEducation">
+              <h3>Highest Education Level Completed : *</h3>
+            </label>
+            <div></div>
+            <select name="highestEducation" required={true}>
+              <option value="SOME HS">some High School</option>
+              <option value="HS" selected>
+                High School / GED
+              </option>
+              <option value="SOME C">some College</option>
+              <option value="AS">Associates (2 years)</option>
+              <option value="BS">Bachelors (4 years)</option>
+              <option value="MS">Masters (6 years)</option>
+              <option value="DS">Doctorate </option>
+              <option value="O 1">other 1 </option>
+              <option value="O 2">other 2</option>
+            </select>
+          </div>
+          <div className="forminfobox">
+            <label htmlFor="yearsExperience">
+              {" "}
+              <h3>Years of Experience : * </h3>{" "}
+            </label>
+            <div></div>
+            <select name="yearsExperience" required={true}>
+              <option value="none">none</option>
+              <option value="1-2" selected>
+                1-2 years
+              </option>
+              <option value="2-3">2-3 years</option>
+              <option value="3-4">3-4 years</option>
+              <option value="5 plus">5 + years</option>
+              <option value="O 1">other 1 </option>
+              <option value="O 2">other 2</option>
+            </select>
+          </div>
+          <div className="forminfobox">
+            <h3>Today's Date : *</h3>
+
             <input
               aria-label="today's date"
               aria-required="true"
@@ -299,6 +341,8 @@ export default class ResumeSubmitForm extends Component {
               required={true}
             />
           </div>
+          {/* on sumbit click validate position, authorized, priors,  
+        and avail checkboxes checked */}
           <input
             type="submit"
             value="Submit"
@@ -311,14 +355,9 @@ export default class ResumeSubmitForm extends Component {
   }
 }
 
-
-
-/// highest ed level
 /// years experience  0-4 or 5+ - info coming
-// schedule requrements / avaliabuility - mon-sun am/pm
-// salary requirements
-
-
+// schedule requirements / availability - mon-sun am/pm shift - open to all
+// salary requirements ?? range?
 
 // hold for now
 
