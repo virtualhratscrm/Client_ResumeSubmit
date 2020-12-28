@@ -1,6 +1,19 @@
 import React, { Component } from "react";
 import "./ResumeForm.css";
 
+var jobTypes = document.getElementsByClassName(".jobtype");
+
+console.log("test");
+
+function validateJobTypeChecked() {
+  var sucess = false;
+
+  for (let i = 0; i < jobTypes.length; i++) {
+    if (sucess) {
+    }
+  }
+}
+
 export default class ResumeSubmitForm extends Component {
   render() {
     return (
@@ -114,14 +127,67 @@ export default class ResumeSubmitForm extends Component {
             <div></div>
             <label htmlFor="state">State *:</label>
             <div></div>
-            <input
+            <select name="state">
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+            {/* <input
               aria-required="true"
               type="text"
               id="state"
               name="state"
               required={true}
               placeholder=" full state name"
-            />
+            /> */}
             <div></div>
             <label htmlFor="zipcode"> Zip Code *:</label>
             <div></div>
@@ -138,7 +204,7 @@ export default class ResumeSubmitForm extends Component {
             <h3>Which position(s) are you interested in? *</h3>
             <div className="formArea">
               <input
-                className="check"
+                className="jobtype"
                 type="checkbox"
                 name="position1"
                 value="Line Cook"
@@ -146,7 +212,7 @@ export default class ResumeSubmitForm extends Component {
               <label htmlFor="position1"> Line Cook</label>
               <div></div>
               <input
-                className="check"
+                className="jobtype"
                 type="checkbox"
                 name="position2"
                 value="Server"
@@ -155,7 +221,7 @@ export default class ResumeSubmitForm extends Component {
               <div></div>
               <input
                 type="checkbox"
-                className="check"
+                className="jobtype"
                 name="position3"
                 value="Server Assistant"
               />
@@ -163,7 +229,7 @@ export default class ResumeSubmitForm extends Component {
               <div></div>
               <input
                 type="checkbox"
-                className="check"
+                className="jobtype"
                 name="position4"
                 value="Food Runner"
               />
@@ -171,7 +237,7 @@ export default class ResumeSubmitForm extends Component {
               <div></div>
               <input
                 type="checkbox"
-                className="check"
+                className="jobtype"
                 name="position5"
                 value="Take Out Attendant"
               />
@@ -179,7 +245,7 @@ export default class ResumeSubmitForm extends Component {
               <div></div>
               <input
                 type="checkbox"
-                className="check"
+                className="jobtype"
                 name="position6"
                 value="Don't see what you need? Submit your resume anyways for future opportunities"
               />
@@ -195,6 +261,7 @@ export default class ResumeSubmitForm extends Component {
               Copy and paste your resume for consideration (please format it). *
             </h3>
             <textarea
+              className="resumeBox"
               aria-required="true"
               id="resume"
               name="resume"
@@ -206,7 +273,7 @@ export default class ResumeSubmitForm extends Component {
             <h3>Are you legally authorized to work in the United States? *</h3>
             <div className="formArea">
               <input
-                className="check"
+                className="authCheck"
                 type="checkbox"
                 name="authorizedTrue"
                 value="authorizedTrue"
@@ -214,7 +281,7 @@ export default class ResumeSubmitForm extends Component {
               <label htmlFor="authorizedTrue"> Yes </label>
               <div></div>
               <input
-                className="check"
+                className="authCheck"
                 type="checkbox"
                 name="authorizedFalse"
                 value="authorizedFalse"

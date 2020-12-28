@@ -2,7 +2,8 @@ body {
   background-color: #a73b00;
 }
 
-.check {
+.jobtype,
+.authCheck {
   text-align: left;
   margin: 0;
   width: auto;
@@ -50,4 +51,8 @@ input {
 
 input:focus {
   border-color: rgb(175, 13, 13);
+}
+
+.resumeBox {
+  width: 80%;
 }
