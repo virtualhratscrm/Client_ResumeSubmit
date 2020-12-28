@@ -127,7 +127,7 @@ export default class ResumeSubmitForm extends Component {
             <div></div>
             <label htmlFor="state">State *:</label>
             <div></div>
-            <select name="state">
+            <select name="state" required={true}>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
               <option value="AZ">Arizona</option>
@@ -137,7 +137,7 @@ export default class ResumeSubmitForm extends Component {
               <option value="CT">Connecticut</option>
               <option value="DE">Delaware</option>
               <option value="DC">District of Columbia</option>
-              <option value="FL">Florida</option>
+              <option value="FL" selected>Florida</option>
               <option value="GA">Georgia</option>
               <option value="HI">Hawaii</option>
               <option value="ID">Idaho</option>
@@ -310,6 +310,15 @@ export default class ResumeSubmitForm extends Component {
     );
   }
 }
+
+
+
+/// highest ed level
+/// years experience  0-4 or 5+ - info coming
+// schedule requrements / avaliabuility - mon-sun am/pm
+// salary requirements
+
+
 
 // hold for now
 
