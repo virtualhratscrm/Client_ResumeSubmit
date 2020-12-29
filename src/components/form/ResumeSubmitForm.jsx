@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import "./ResumeForm.css";
 
-var jobTypes = document.querySelectorAll(".jobtype");
+// var jobTypes = document.querySelectorAll(".jobtype");
 
-console.log("test");
+// console.log("test");
 
-function validateJobTypeChecked() {
-  var sucess = false;
-  console.log(jobTypes);
-  for (let i = 0; i < jobTypes.length; i++) {
-    if (jobTypes[i].checked) {
-      sucess = true;
-    }
-  }
-}
+// function validateJobTypeChecked() {
+//   var sucess = false;
+//   console.log(jobTypes);
+//   for (let i = 0; i < jobTypes.length; i++) {
+//     if (jobTypes[i].checked) {
+//       sucess = true;
+//     }
+//   }
+// }
 
-validateJobTypeChecked();
+// validateJobTypeChecked();
 
 export default class ResumeSubmitForm extends Component {
   render() {
@@ -140,7 +140,7 @@ export default class ResumeSubmitForm extends Component {
               <option value="CT">Connecticut</option>
               <option value="DE">Delaware</option>
               <option value="DC">District of Columbia</option>
-              <option value="FL" selected>
+              <option value="FL" defaultValue>
                 Florida
               </option>
               <option value="GA">Georgia</option>
@@ -301,14 +301,12 @@ export default class ResumeSubmitForm extends Component {
             <div></div>
             <select name="highestEducation" required={true}>
               <option value="SOME HS">some High School</option>
-              <option value="HS" selected>
-                High School / GED
-              </option>
-              <option value="SOME C">some College</option>
-              <option value="AS">Associates (2 years)</option>
-              <option value="BS">Bachelors (4 years)</option>
-              <option value="MS">Masters (6 years)</option>
-              <option value="DS">Doctorate </option>
+              <option value="HS Grad">High School / GED</option>
+              <option value="SOME College">some College</option>
+              <option value="AS degree">Associates (2 years)</option>
+              <option value="BS degree">Bachelors (4 years)</option>
+              <option value="MS degree">Masters (6 years)</option>
+              <option value="DS degree">Doctorate </option>
               <option value="O 1">other 1 </option>
               <option value="O 2">other 2</option>
             </select>
@@ -321,15 +319,70 @@ export default class ResumeSubmitForm extends Component {
             <div></div>
             <select name="yearsExperience" required={true}>
               <option value="none">none</option>
-              <option value="1-2" selected>
-                1-2 years
-              </option>
-              <option value="2-3">2-3 years</option>
+              <option value="1-2">1-2 years</option>
               <option value="3-4">3-4 years</option>
               <option value="5 plus">5 + years</option>
-              <option value="O 1">other 1 </option>
-              <option value="O 2">other 2</option>
             </select>
+          </div>
+          <div className="forminfobox">
+            <h3>Salary Expectations *</h3>
+            <input type="number" min={7.25} max={100000} precision={2} />
+            <select name="Salary" required={true}>
+              <option value="annual">Annualy</option>
+              <option value="hourly" defaultValue>
+                Hourly
+              </option>
+            </select>
+          </div>
+          <div className="forminfobox">
+            <h3>Schedule Availability *</h3>
+            <div className="formArea">
+              <input
+                className="schedCheck"
+                type="checkbox"
+                name="openAvail"
+                value="open avail"
+              />
+              <label htmlFor="openAvail"> Open </label>
+              <div></div>
+              <input
+                className="schedCheck"
+                type="checkbox"
+                name="weekends"
+                value="weekends"
+              />
+              <label htmlFor="weekends"> Available on weekends </label>{" "}
+              <div></div>
+              <input
+                className="schedCheck"
+                type="checkbox"
+                name="nightsOnly"
+                value="nightsOnly"
+              />
+              <label htmlFor="nightsOnly"> PM Only </label> <div></div>
+              <input
+                className="schedCheck"
+                type="checkbox"
+                name="morningsOnly"
+                value="morningsOnly"
+              />
+              <label htmlFor="morningsOnly"> AM only </label> <div></div>
+              <input
+                className="schedCheck"
+                type="checkbox"
+                name="amandpm"
+                value="amandpm"
+              />
+              <label htmlFor="amandpm">Both AM and PM Shifts </label>
+              <div></div>
+              <input
+                className="schedCheck"
+                type="checkbox"
+                name="notWeekends"
+                value="notWeekends"
+              />
+              <label htmlFor="notWeekends">NOT Available on weekends </label>{" "}
+            </div>
           </div>
           <div className="forminfobox">
             <h3>Today's Date : *</h3>
@@ -355,13 +408,11 @@ export default class ResumeSubmitForm extends Component {
   }
 }
 
-/// years experience  0-4 or 5+ - info coming
-// schedule requirements / availability - mon-sun am/pm shift - open to all
-// salary requirements ?? range?
-
 // hold for now
 
 // visa sponsorship question ?
+
+// https://www.eeoc.gov/pre-employment-inquiries-and-arrest-conviction
 
 // prior conviction clause
 // check box yes / no

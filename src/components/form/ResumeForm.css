@@ -3,7 +3,8 @@ body {
 }
 
 .jobtype,
-.authCheck {
+.authCheck,
+.schedCheck {
   text-align: left;
   margin: 0;
   width: auto;
