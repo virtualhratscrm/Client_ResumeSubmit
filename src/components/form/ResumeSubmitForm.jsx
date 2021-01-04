@@ -30,6 +30,7 @@ export default class ResumeSubmitForm extends Component {
         </div>
         <div className="forminfobox">
           <h2>Job Interest Form </h2>
+          {/* make these 2 paragraphs changeable from admin on backend */}
           <p>
             We know that finding a meaningful and rewarding job can be a long
             journey and daunting. Our goal is to make that process as easy as
@@ -185,14 +186,7 @@ export default class ResumeSubmitForm extends Component {
               <option value="WI">Wisconsin</option>
               <option value="WY">Wyoming</option>
             </select>
-            {/* <input
-              aria-required="true"
-              type="text"
-              id="state"
-              name="state"
-              required={true}
-              placeholder=" full state name"
-            /> */}
+
             <div></div>
             <label htmlFor="zipcode"> Zip Code : *</label>
             <div></div>
@@ -207,6 +201,9 @@ export default class ResumeSubmitForm extends Component {
           </div>
           <div className="forminfocheckbox">
             <h3>Which position(s) are you interested in? *</h3>
+
+{/* make these 'open job types' changeable from admin on backend */}
+
             <div className="formArea">
               <input
                 className="jobtype"
@@ -274,6 +271,9 @@ export default class ResumeSubmitForm extends Component {
               placeholder="Resume Here"
             />
           </div>{" "}
+
+{/* is there a safe way to have them upload a .pdf or .doc file instead ? */}
+
           <div className="forminfobox">
             <h3>Are you legally authorized to work in the United States? *</h3>
             <div className="formArea">
@@ -300,15 +300,13 @@ export default class ResumeSubmitForm extends Component {
             </label>
             <div></div>
             <select name="highestEducation" required={true}>
-              <option value="SOME HS">some High School</option>
+              <option value="SOME HS">Some High School</option>
               <option value="HS Grad">High School / GED</option>
-              <option value="SOME College">some College</option>
+              <option value="SOME College">Some College</option>
               <option value="AS degree">Associates (2 years)</option>
               <option value="BS degree">Bachelors (4 years)</option>
               <option value="MS degree">Masters (6 years)</option>
               <option value="DS degree">Doctorate </option>
-              <option value="O 1">other 1 </option>
-              <option value="O 2">other 2</option>
             </select>
           </div>
           <div className="forminfobox">
@@ -318,24 +316,25 @@ export default class ResumeSubmitForm extends Component {
             </label>
             <div></div>
             <select name="yearsExperience" required={true}>
-              <option value="none">none</option>
               <option value="1-2">1-2 years</option>
               <option value="3-4">3-4 years</option>
               <option value="5 plus">5 + years</option>
+              <option value="none">None</option>
             </select>
           </div>
           <div className="forminfobox">
             <h3>Salary Expectations *</h3>
-            <input type="number" min={7.25} max={100000} precision={2} />
+            <input type="number" min={7} max={100000}  />
             <select name="Salary" required={true}>
-              <option value="annual">Annualy</option>
-              <option value="hourly" defaultValue>
+              <option value="year">Annually</option>
+              <option value="hour" defaultValue>
                 Hourly
               </option>
             </select>
           </div>
           <div className="forminfobox">
             <h3>Schedule Availability *</h3>
+            <h4>Select all that Apply</h4>
             <div className="formArea">
               <input
                 className="schedCheck"
@@ -351,7 +350,7 @@ export default class ResumeSubmitForm extends Component {
                 name="weekends"
                 value="weekends"
               />
-              <label htmlFor="weekends"> Available on weekends </label>{" "}
+              <label htmlFor="weekends"> Available on Weekends </label>{" "}
               <div></div>
               <input
                 className="schedCheck"
@@ -381,7 +380,7 @@ export default class ResumeSubmitForm extends Component {
                 name="notWeekends"
                 value="notWeekends"
               />
-              <label htmlFor="notWeekends">NOT Available on weekends </label>{" "}
+              <label htmlFor="notWeekends">NOT Available on Weekends </label>{" "}
             </div>
           </div>
           <div className="forminfobox">
@@ -407,13 +406,3 @@ export default class ResumeSubmitForm extends Component {
     );
   }
 }
-
-// hold for now
-
-// visa sponsorship question ?
-
-// https://www.eeoc.gov/pre-employment-inquiries-and-arrest-conviction
-
-// prior conviction clause
-// check box yes / no
-// explain field
