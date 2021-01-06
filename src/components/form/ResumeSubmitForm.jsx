@@ -393,7 +393,7 @@ export default class ResumeSubmitForm extends Component {
               required={true}
             />
           </div>
-          {/* on sumbit click validate position, authorized, priors,  
+          {/* on sumbit click validate position, authorized,   
         and avail checkboxes checked */}
           <input
             type="submit"
@@ -406,3 +406,21 @@ export default class ResumeSubmitForm extends Component {
     );
   }
 }
+
+
+// validate input check boxes - positions - avail - authorized 
+
+// 3 for loops
+
+// way to make dynamic opening paragraph and open positions ????
+
+// security of pdf or doc vs upload resume as String ...
+
+// inputs work / user testing 
+
+// does info need to be in this.state? 
+
+/// regex for name only letters and spaces - phone and zip only numbers and - and ()'s
+/// address regex no special chars 
+/// regex for no "add" "drop" "alter" "create" - ok what about walter  or maddie?
+
