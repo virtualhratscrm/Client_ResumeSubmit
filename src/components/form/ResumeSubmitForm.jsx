@@ -422,5 +422,8 @@ export default class ResumeSubmitForm extends Component {
 
 /// regex for name only letters and spaces - phone and zip only numbers and - and ()'s
 /// address regex no special chars 
-/// regex for no "add" "drop" "alter" "create" - ok what about walter  or maddie?
+/// regex for no SQL - caps exact match "ADD" "DROP" "ALTER" "CREATE" "ADMIN" "USER" "TABLE"
 
+
+
+//// use travis to run tests and deploy?
